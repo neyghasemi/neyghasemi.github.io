@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ney's Quantization Tool</title>
+    <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
+    <script src="script.js" type="module"></script>
+    <style>
+        select {
+          background-color: #6daeac; 
+          color: #000000;}
+        label {
+            background-color: #f0f0f0; 
+            color: #333; 
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+        h1 {
+            color: rgb(46, 42, 37);
+            outline: #263c3b;
+            font-family: Georgia, 'Times New Roman', Times, serif; }
+        h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: small;
+        color: #333; }
+    </style> 
+  </head>
+  <body>
+  
+    <h1>Quantization Tool</h1>
+
+    <h2>Negar Ghasemi</h2>
+    <p> This tools store the phrase that you play, and quantizes it for you
+        to the nearest subdivision that you select.
+    </p>
+    <div>
+      <label for="dropdown-ins">Select a MIDI Input:</label>
+      <select id="dropdown-ins">
+      </select>
+    </div>
+
+    <div>
+      <label for="dropdown-outs">Select a MIDI Output:</label>
+      <select id="dropdown-outs">
+      </select>
+    </div>
+    <div>
+        <label for="bpm">Set BPM:</label>
+        <input type="number" id="bpm" value="120">
+    </div>
+  
+    <div>
+        <label for="quantizationTool">Select Quantization Level:</label>
+        <select id="quantizationTool" >
+          <option value="1">Whole Note</option>
+          <option value="0.5">Half Note</option>
+          <option value="0.25" selected>Quarter Note</option>
+          <option value="0.125">Eighth Note</option>
+          <option value="0.0625">Sixteenth Note</option>
+        </select>
+    </div>
+    <div>
+
+    </div>
+  </body>
+</html>
